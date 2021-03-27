@@ -1,0 +1,12 @@
+@startuml
+[*]-->Cadastrado
+NãoCadastrado -left-> Cadastrado : Efetuar cadastro do produto
+Cadastrado -right-> NãoCadastrado : Se não estiver
+
+Cadastrado --> NoEstoque
+NoEstoque -left-> EmFalta : Não tem
+EmFalta -right-> NoEstoque : Repôr
+
+NoEstoque --> Locado
+Locado-->[*]
+@enduml

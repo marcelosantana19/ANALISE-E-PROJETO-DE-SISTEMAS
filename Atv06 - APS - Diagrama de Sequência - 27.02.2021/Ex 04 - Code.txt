@@ -1,0 +1,26 @@
+@startuml
+actor Cliente
+actor Operador
+actor Gerente
+participant OperadorDeSistema << (C,#ADD1B2) >>
+
+Cliente -> Operador: Desistir da locação
+
+activate Operador
+
+Operador -> OperadorDeSistema: procurarCliente()
+
+activate OperadorDeSistema
+OperadorDeSistema --> Operador: cliente encontrado
+deactivate OperadorDeSistema
+
+Operador -> OperadorDeSistema: excluirLocacao()
+
+activate OperadorDeSistema
+OperadorDeSistema --> Operador: exclusão efetuada
+deactivate OperadorDeSistema
+
+Operador --> Cliente: Exclusão bem sucedida
+
+deactivate Operador
+@enduml

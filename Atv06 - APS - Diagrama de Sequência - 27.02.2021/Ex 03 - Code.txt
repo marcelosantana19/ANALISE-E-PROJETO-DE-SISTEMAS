@@ -1,0 +1,39 @@
+@startuml
+actor Cliente
+actor Operador
+actor Gerente
+participant OperadorDeSistema << (C,#ADD1B2) >>
+
+
+Cliente -> Operador: Entregar Produto com atraso
+
+activate Operador
+
+Operador -> OperadorDeSistema: procurarCliente();
+activate OperadorDeSistema
+OperadorDeSistema --> Operador: cliente encontrado
+deactivate OperadorDeSistema
+
+Operador -> OperadorDeSistema: calcularMulta();
+activate OperadorDeSistema
+OperadorDeSistema --> Operador: multa calculada
+deactivate OperadorDeSistema
+
+Operador --> Cliente: Informar pagamento
+deactivate Operador
+
+Cliente -> Operador: Realizar Pagamento
+activate Operador
+Operador --> Cliente: Pagamento realizado
+deactivate Operador
+
+Operador -> OperadorDeSistema: darBaixa();
+activate OperadorDeSistema
+OperadorDeSistema --> Operador: baixa realizada
+deactivate OperadorDeSistema
+
+
+
+
+deactivate Operador
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+|Gerente|
+start
+:Procurar Produto;
+|Sistema|
+:Solicitar informações do produto;
+|Gerente|
+:Fornecer dados;
+|Sistema|
+:Buscar produto de acordo com as informações;
+|Sistema|
+:Mostrar informações encontradas;
+
+
+stop
+@enduml

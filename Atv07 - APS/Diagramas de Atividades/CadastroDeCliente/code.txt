@@ -1,0 +1,14 @@
+@startuml
+
+|Gerente|
+start
+:Adicionar Cliente;
+|Sistema|
+:Solicitar dados do cliente;
+|Gerente|
+:Fornecer dados;
+|Sistema|
+:Efetuar cadastro e guardar informações;
+stop
+
+@enduml

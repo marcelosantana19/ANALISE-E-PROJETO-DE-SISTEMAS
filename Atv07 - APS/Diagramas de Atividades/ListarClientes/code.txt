@@ -1,0 +1,15 @@
+@startuml
+|Gerente|
+start
+:Listar clientes;
+|Sistema|
+:Solicitar informações
+necessárias;
+|Gerente|
+:Fornecer informações;
+|Sistema|
+:Buscar clientes;
+|Sistema|
+:Listar clientes;
+stop
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+|Cliente|
+start
+:Solicitar baixa
+de um produto;
+|Operador|
+:Verificar situação
+no sistema;
+|Sistema|
+:Fornecer a informação;
+|Operador|
+if (Recebeu produto?) then (sim)
+ :Dar baixa no sistema;
+ |Sistema|
+ :Atualizar informações;
+else (não)
+ |Operador|
+ :Solicitar produto ao cliente;
+endif
+stop
+@enduml

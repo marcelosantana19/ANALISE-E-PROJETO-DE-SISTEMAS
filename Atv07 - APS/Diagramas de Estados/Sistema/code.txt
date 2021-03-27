@@ -1,0 +1,7 @@
+@startuml
+[*]-->Inicializado 
+Inicializado --> Logado : Fazer Login
+Logado -->Trabalhando
+Trabalhando --> Encerrado : Encerrar
+Encerrado-->[*]
+@enduml

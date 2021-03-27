@@ -1,0 +1,31 @@
+@startuml
+actor Fornecedora
+actor gerente
+actor Operador
+participant Gerente << (C,#ADD1B2) >>
+
+
+Fornecedora -> gerente: Oferece novos produtos
+activate gerente
+
+gerente -> Gerente: procurarProdutos()
+activate Gerente
+Gerente --> gerente: busca realizada
+deactivate Gerente
+
+gerente --> Fornecedora: [se está em falta] Pedir produtos
+deactivate gerente
+
+Fornecedora -> gerente: Entrega produtos
+activate gerente
+
+gerente -> Gerente: addProduto()
+activate Gerente
+Gerente --> gerente: produto adcionado no estoque
+deactivate Gerente
+
+gerente --> gerente: produto cadastrado
+
+gerente --> Fornecedora: pagamento efetuado
+deactivate gerente
+@enduml

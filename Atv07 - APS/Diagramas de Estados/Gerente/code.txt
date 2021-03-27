@@ -1,0 +1,9 @@
+@startuml
+[*]-->Contratado 
+Contratado --> Cadastrado : Realizar Cadastro
+Cadastrado --> LogadoNoSistema
+LogadoNoSistema --> Trabalhando 
+LogadoNoSistema-right->NãoLogado: Efetuar Login
+NãoLogado-left->LogadoNoSistema: Login Realizado
+Trabalhando-->[*]
+@enduml

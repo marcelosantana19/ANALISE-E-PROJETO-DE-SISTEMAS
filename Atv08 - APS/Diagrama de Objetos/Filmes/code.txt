@@ -1,0 +1,32 @@
+@startuml
+abstract class Produto{
+
+ String: codigo;
+ String: titulo;
+ String: genero;
+ Boolean: locado;
+
+}
+
+class Filme extends Produto{
+
+ String: anoLancamento;
+ String: duracao;
+
+}
+
+
+object Filme12{
+
+ codigo = "1213"
+ titulo = "Interestelar"
+ genero = "Ficcao Cientifica"
+ locado = false
+ anoLancamento = "2014"
+ duracao = 2:26
+
+ 
+}
+
+Filme12 .up.> Filme : <<instancia>>
+@enduml

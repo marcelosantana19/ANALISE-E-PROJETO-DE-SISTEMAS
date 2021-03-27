@@ -1,0 +1,8 @@
+@startuml
+[*]-->Cadastrado
+Cadastrado-right->NãoCadastrado: Realizar Cadastro
+NãoCadastrado-left->Cadastrado: Cadastro Realizado
+Cadastrado --> NoSistema: Fornecer Dados
+NoSistema -->ProntoParaConsumir: Tudo ok
+ProntoParaConsumir --> [*]
+@enduml

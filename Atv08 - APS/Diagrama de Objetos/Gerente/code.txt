@@ -1,0 +1,35 @@
+@startuml
+abstract class Pessoa{
+
+ String nome;
+ String matricula;
+
+}
+
+class Funcionario extends Pessoa{
+
+ String login;
+ String senha;
+
+}
+
+class Gerente extends Funcionario{
+ String: endereco;
+ int: idade;
+ String: sexo;
+}
+
+object GerenteMB{
+
+ nome = "Marcos Batista"
+ matricula = "4553"
+ login = "marcos98"
+ senha = "4983hf94"
+ endereco = "Rua Acai, 2094 - São Paulo-SP"
+ idade = 45
+ sexo = "masculino"
+
+}
+
+GerenteMB .up.> Gerente : <<instancia>>
+@enduml

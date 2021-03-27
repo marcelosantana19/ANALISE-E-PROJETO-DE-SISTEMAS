@@ -1,0 +1,21 @@
+@startuml
+|Cliente|
+start
+:Entregar produto;
+|Operador|
+:Verificar informações
+do produto no sistema;
+|Sistema|
+:Fornecer informações;
+|Operador|
+if(entrega com atraso?) then (sim)
+ :Calcular multa;
+ :Informar novo valor ao sistema;
+ |Sistema|
+ :Atualizar valor;
+else(não)
+ |Operador|
+ :Dar baixa no sistema;
+endif
+stop
+@enduml

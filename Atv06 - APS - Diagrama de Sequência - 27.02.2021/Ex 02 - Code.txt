@@ -1,0 +1,25 @@
+@startuml
+actor Cliente
+actor Operador
+actor Gerente
+
+participant OperadorDeSistema << (C,#ADD1B2) >>
+
+Cliente -> Operador: Solicitar Produto
+
+activate  Operador
+Operador -> OperadorDeSistema: procurarCliente()
+
+activate  OperadorDeSistema
+OperadorDeSistema --> Operador: [se tiver cadastrado] cliente encontrado
+deactivate  OperadorDeSistema
+
+Operador -> OperadorDeSistema: realizarLocacao()
+
+activate  OperadorDeSistema
+OperadorDeSistema --> Operador: [se tiver produto] locação confirmada
+deactivate  OperadorDeSistema
+
+Operador --> Cliente: locação efetuada com sucesso
+deactivate  Operador
+@enduml

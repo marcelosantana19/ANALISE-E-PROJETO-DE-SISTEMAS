@@ -1,0 +1,14 @@
+@startuml
+[*]-->Contratado
+NãoCadastrado -left-> Cadastrado : Efetuar cadastro
+Cadastrado -right-> NãoCadastrado : Se não estiver
+
+Contratado --> Cadastrado
+
+Cadastrado --> LogadoNoSistema
+LogadoNoSistema -left-> ForaDoSistema : Não está
+ForaDoSistema -right-> LogadoNoSistema : Logar
+
+LogadoNoSistema--> ProntoParaTrabalhar
+ProntoParaTrabalhar -->[*]
+@enduml

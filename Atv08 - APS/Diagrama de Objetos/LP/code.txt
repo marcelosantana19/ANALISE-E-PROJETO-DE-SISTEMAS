@@ -1,0 +1,35 @@
+@startuml
+abstract class Produto{
+
+ String: codigo;
+ String: titulo;
+ String: genero;
+ Boolean: locado;
+
+}
+
+class Musica extends Produto{
+
+ String: autor;
+ int: numFaixas;
+
+}
+
+class LP extends Musica{
+  boolean: raro;
+}
+
+object LP123{
+
+ codigo = "02123"
+ titulo = "Ultimate Sinatra"
+ genero = "Rock"
+ autor = "Frank Sinatra"
+ numFaixas = 8
+ locado = true
+ raro = true
+ 
+}
+
+LP123 .up.> LP : <<instancia>>
+@enduml

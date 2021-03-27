@@ -1,0 +1,20 @@
+@startuml
+actor Cliente
+actor gerente
+actor Operador
+participant Gerente << (C,#ADD1B2) >>
+
+Cliente -> gerente: Solicitar cadastro
+
+activate gerente
+
+
+gerente -> Gerente: addCliente ()
+activate Gerente
+Gerente --> gerente: cliente adicionado
+deactivate Gerente
+
+gerente --> Cliente: Cadastro realizado
+
+deactivate gerente
+@enduml

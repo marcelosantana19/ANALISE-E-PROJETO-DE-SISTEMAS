@@ -1,0 +1,37 @@
+@startuml
+abstract class Produto{
+
+ String: codigo;
+ String: titulo;
+ String: genero;
+ Boolean: locado;
+
+}
+
+class Musica extends Produto{
+
+ String: autor;
+ int: numFaixas;
+
+}
+
+class CD extends Musica{
+ boolean arranhado;
+ boolean arranhado;
+}
+
+object CD13{
+
+ codigo = "0987"
+ titulo = "(Whats the history) Morning Glory?"
+ genero = "Rock"
+ autor = "Oasis"
+ numFaixas = 12
+ locado = true
+ duplo = false
+ arranhado = false
+ 
+}
+
+CD13 .up.> CD : <<instancia>>
+@enduml
